@@ -45,7 +45,7 @@ function renderWeather(weather, resultContainerId) {
 // this function fetches weather data for a given city using the OpenWeatherMap API
 function fetchWeather(query, resultContainerId){
   // create the API URL with the query and API key
-  var url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&units=imperial&appid=b61f110118caad69f8c7ac2c455702b4";
+  var url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&units=imperial&appid={YOUR API KEY HERE}";
 
   // make a GET request to the API URL using the fetch() method
   fetch(url)
