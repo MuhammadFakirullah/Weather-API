@@ -10,7 +10,7 @@ How to setup the API:
 3) Open a new tab on browser, paste the link. 
 4) On profile, search on your username --> my api keys, then copy the default key, or you can generate another key
 5) Open back the tab that you paste the url, replace {API key} with your default key, then change {city name} to your preferred selected city. E.g: Selangor. Then press enter
-6) See if the result generated an xml output that shwows current weather in your selected city, the the url is ready to use
+6) See if the result generated an xml output that shows current weather in your selected city, then the url is ready to use
 7) To test the result with JSON format, open POSTMAN software, set the http method to GET, the paste the url, then click send
 8) You will see the data in JSON format view, the units will stay at default condition. To make changes. You will need to add some parameter to the url. In my case, i add "&units=imperial" after city name.
 9) Then, click send. The result will change according to the parameter added.
