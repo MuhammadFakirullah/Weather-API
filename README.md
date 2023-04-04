@@ -14,3 +14,4 @@ How to setup the API:
 7) To test the result with JSON format, open POSTMAN software, set the http method to GET, paste the url, then click send
 8) You will see the data in JSON format view, the units will stay at default condition. To make changes. You will need to add some parameter to the url. In my case, i add "&units=imperial" after city name.
 9) Then, click send. The result will change according to the parameter added.
+10) To fetch the weather API data, you can take a closer look at my script.js file.  I already explained the codes in there.
