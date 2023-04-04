@@ -1,0 +1,17 @@
+.swiper {
+    width: 1000px;
+    height: 580px;
+}
+
+.content-section {
+  background-image: url("C:/Users/muham/OneDrive/Pictures/weather api/images/blue.jpg");
+  background-size: cover;
+  background-position: center;
+  /*height: 1000px; /* adjust height as needed */
+  margin-bottom: -1.5em;
+  padding-bottom: 0;
+}
+
+.card{
+  border-width: 0;
+}

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Using Bootstrap CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!--Using fontawesome JS-->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    
+    <!--Use Swiper from CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!--attach with JS file-->
+    <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
+
+    <!--attach external CSS file-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Placing an icon on tab-->
+    <link rel="icon" href="images/weather.png">
+    
+    <!--Tab title-->
+    <title>Weather API</title>
+</head>
+<body>
+  
+    <!--Navigation bar-->
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <img src="images/weather.png" alt="" width="40" height="34" class="d-inline-block align-text-top">
+                Weather Forecast</a>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" aria-label="Search" 
+              id="search-input" oninput="filterCards()">&nbsp;
+              <button class="btn btn-outline-success" type="submit"><a class="fa fa-search"></a></button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="content-section">
+    <!--Contents-->
+    <center><h6 style="padding-top: 20px;">CURRENT WEATHER OF CITIES IN MALAYSIA</h6></center><br>
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+          <!-- 1st Slides --><br>
+          <div class="swiper-slide">
+              <div class="container">
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                      <div class="col mb-4">
+                        <div class="card">
+                          <div class="card-body shadow p-3" id="weather-results-1">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col mb-4">
+                        <div class="card">
+                          <div class="card-body shadow p-3" id="weather-results-2">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col mb-4">
+                        <div class="card">
+                          <div class="card-body shadow p-3" id="weather-results-3">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col mb-4">
+                        <div class="card">
+                          <div class="card-body shadow p-3" id="weather-results-4">
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                      <div class="col mb-4">
+                        <div class="card">
+                          <div class="card-body shadow p-3" id="weather-results-5">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col mb-4">
+                        <div class="card">
+                          <div class="card-body shadow p-3" id="weather-results-6">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col mb-4">
+                        <div class="card">
+                          <div class="card-body shadow p-3" id="weather-results-7">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col mb-4">
+                        <div class="card">
+                          <div class="card-body shadow p-3" id="weather-results-8">
+                          </div>
+                        </div>
+                      </div>
+                  </div>        
+              </div>
+          </div>
+          <!--1st slide-->
+
+          <!--2nd slide-->
+          <div class="swiper-slide">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-9">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-10">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-11">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-12">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-13">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-14">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-15">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-16">
+                        </div>
+                      </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+          <!--2nd slide-->
+          
+          <!--3rd slide-->
+          <div class="swiper-slide">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-17">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-18">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-19">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-20">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-21">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-22">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-23">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <div class="card-body shadow p-3" id="weather-results-24">
+                        </div>
+                      </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+          <!--3rd slide-->
+          
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons 
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>-->
+
+      <!-- If we need scrollbar 
+      <div class="swiper-scrollbar"></div>-->
+    </div>
+    <!--Contents-->
+    </div>
+    <!--Footer-->
+    <div class="footer" style="height:30px;">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p class="col-md-4 mb-0 text-muted">© 2023 Weather Forecast, Inc</p>
+      
+          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+          </ul>
+        </footer>
+    </div>
+</body>
+
+  <!--For javascript (Swiper JS)-->
+  <script>
+    const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+    });
+  </script>
+
+</html>
